@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="filenym-banner.png" alt="FileNym — One file. Many names." width="100%">
+  <img src="filenym_banner.png" alt="FileNym — One file. Many names." width="100%">
 </p>
 
 # filenym
