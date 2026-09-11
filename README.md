@@ -49,6 +49,34 @@ The first technical question is:
 
 > How can one physical file be reliably presented to another application under a different filename without duplicating its contents?
 
+## Contributors Wanted
+
+FileNym is currently in its research and architecture stage, and technical contributions are especially valuable.
+
+We are looking for developers and researchers interested in:
+
+- Filesystems and virtual filesystems
+- Windows filesystem APIs
+- Linux FUSE and macFUSE
+- Browser file handling and extensions
+- Native application integration
+- Systems programming
+- File identity, permissions, and security
+- Cross-platform architecture
+
+You do not need to implement the entire FileNym concept to contribute.
+
+Small reproducible experiments, compatibility findings, technical references, architecture observations, and proof-of-concept work are all valuable.
+
+### Where to Start
+
+- Join the main architecture discussion in **GitHub Discussions**
+- Review **RFC 0001: Contextual File Alias Mechanism**
+- Explore issues labeled **`research`**
+- Look for issues labeled **`good first issue`** if you want a smaller starting point
+
+If you have experience with any relevant filesystem, operating system, browser, or native integration technology, we would especially value your perspective.
+
 ## Open Source
 
 FileNym is being developed openly.
