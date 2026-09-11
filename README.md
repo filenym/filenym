@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="filenym-banner.png" alt="FileNym — One file. Many names." width="100%">
+</p>
+
 # filenym
 One file. Many names. An open source contextual file identity project.
 
