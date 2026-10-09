@@ -77,6 +77,19 @@ Small reproducible experiments, compatibility findings, technical references, ar
 
 If you have experience with any relevant filesystem, operating system, browser, or native integration technology, we would especially value your perspective.
 
+## Development
+
+On Windows, install Node.js 22 and the stable Rust toolchain, then run from the repository root:
+
+```powershell
+npm.cmd ci
+npm.cmd run tauri:dev
+```
+
+For frontend-only development, run `npm.cmd run dev`.
+
+The foundation checks are `npm.cmd run format:check`, `npm.cmd run lint`, `npm.cmd run typecheck`, `npm.cmd run test`, `npm.cmd run build`, `cargo check --workspace`, `cargo fmt --all -- --check`, `cargo clippy --workspace --all-targets -- -D warnings`, and `cargo test --workspace`.
+
 ## Open Source
 
 FileNym is being developed openly.
