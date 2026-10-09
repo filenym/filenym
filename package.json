@@ -10,7 +10,7 @@
     "tauri:build": "tauri build",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
     "lint": "eslint .",
-    "format": "prettier --write index.html package.json vite.config.ts eslint.config.js prettier.config.cjs tsconfig.json tsconfig.node.json src-tauri/tauri.conf.json src-tauri/capabilities/default.json \"src/**/*.{ts,tsx,css}\"",
+    "format": "prettier --write index.html package.json vite.config.ts eslint.config.js prettier.config.cjs tsconfig.json tsconfig.node.json src-tauri/tauri.conf.json src-tauri/capabilities/default.json \"src/**/*.{ts,tsx,css}\" && cargo fmt --all",
     "format:check": "prettier --check index.html package.json vite.config.ts eslint.config.js prettier.config.cjs tsconfig.json tsconfig.node.json src-tauri/tauri.conf.json src-tauri/capabilities/default.json \"src/**/*.{ts,tsx,css}\"",
     "test": "vitest run",
     "test:watch": "vitest"
