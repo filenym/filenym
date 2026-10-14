@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 filenym-core = { path = "../filenym-core" }
 filenym-ports = { path = "../filenym-ports" }
+rusqlite = { version = "=0.40.2", default-features = false, features = ["bundled"] }

@@ -11,6 +11,7 @@ mod ids;
 mod lifecycle;
 mod location;
 mod metadata;
+mod rehydration;
 
 pub use alias::Alias;
 pub use alias_name::AliasName;
@@ -23,3 +24,4 @@ pub use lifecycle::{
 };
 pub use location::KnownFileLocation;
 pub use metadata::FileMetadata;
+pub use rehydration::{AliasSnapshot, CanonicalFileSnapshot};
