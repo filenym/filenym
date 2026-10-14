@@ -23,6 +23,7 @@ pub enum DomainError {
     DuplicateAliasName,
     DuplicateAliasId,
     AliasNotFound,
+    AliasOwnershipMismatch,
     IdentityMismatch,
     UnresolvedReplacement,
 }
@@ -39,6 +40,7 @@ impl fmt::Display for DomainError {
                 Self::DuplicateAliasName => "duplicate alias name",
                 Self::DuplicateAliasId => "duplicate alias ID",
                 Self::AliasNotFound => "alias not found",
+                Self::AliasOwnershipMismatch => "alias owner does not match canonical record",
                 Self::IdentityMismatch => "identity evidence conflicts",
                 Self::UnresolvedReplacement => {
                     "possible replacement requires explicit same-file recovery"

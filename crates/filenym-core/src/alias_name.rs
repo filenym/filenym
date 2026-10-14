@@ -68,6 +68,11 @@ impl AliasName {
     pub(crate) fn key(&self) -> &str {
         &self.key
     }
+    /// ASCII-folded uniqueness key. Non-ASCII case and normalization forms
+    /// remain distinct. This is not filesystem collation.
+    pub fn comparison_key(&self) -> &str {
+        &self.key
+    }
 }
 
 #[cfg(test)]

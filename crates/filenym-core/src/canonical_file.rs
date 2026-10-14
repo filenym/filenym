@@ -20,6 +20,37 @@ pub struct CanonicalFile {
 }
 
 impl CanonicalFile {
+    /// Restores validated facts without asserting physical identity, replaying
+    /// observations, or clearing a persisted lifecycle status.
+    pub fn restore(snapshot: crate::CanonicalFileSnapshot) -> Result<Self, DomainError> {
+        let mut file = snapshot.canonical;
+        let mut aliases: Vec<Alias> = Vec::with_capacity(snapshot.aliases.len());
+        for alias in snapshot.aliases {
+            if alias.owner != file.id {
+                return Err(DomainError::AliasOwnershipMismatch);
+            }
+            if alias.created_at < file.registered_at || alias.updated_at < alias.created_at {
+                return Err(DomainError::InvalidTimestamp);
+            }
+            if aliases.iter().any(|existing| existing.id() == &alias.id) {
+                return Err(DomainError::DuplicateAliasId);
+            }
+            if aliases
+                .iter()
+                .any(|existing| existing.name().key() == alias.name.key())
+            {
+                return Err(DomainError::DuplicateAliasName);
+            }
+            let mut restored =
+                Alias::new(alias.id, alias.owner, alias.name.clone(), alias.created_at);
+            restored.rename(alias.name, alias.updated_at);
+            aliases.push(restored);
+        }
+        file.aliases = aliases;
+        file.status = snapshot.status;
+        file.last_observed_at = snapshot.observed_at;
+        Ok(file)
+    }
     /// Initial registration facts are supplied by a trusted caller; this does
     /// not register, inspect, or verify a physical file.
     pub fn new(
