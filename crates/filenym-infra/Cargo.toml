@@ -1,0 +1,8 @@
+[package]
+name = "filenym-infra"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+filenym-core = { path = "../filenym-core" }
+filenym-ports = { path = "../filenym-ports" }

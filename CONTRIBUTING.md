@@ -95,6 +95,29 @@ A good pull request should explain:
 
 Major architectural changes should reference the relevant Discussion, Issue, or RFC.
 
+### Formatting and Validation
+
+Install the locked frontend dependencies with:
+
+```text
+npm ci
+```
+
+Before committing, format the frontend, configuration files, and Rust workspace with:
+
+```text
+npm run format
+```
+
+Run the same formatting checks used by GitHub Actions with:
+
+```text
+npm run format:check
+cargo fmt --all -- --check
+```
+
+The repository uses LF line endings through `.gitattributes` so Prettier behaves consistently across operating systems. Both `package-lock.json` and `Cargo.lock` are committed and should remain in sync with their manifests.
+
 ## Design Principles
 
 Contributions should respect FileNym's current core principles:

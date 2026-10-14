@@ -1,0 +1,9 @@
+[workspace]
+members = [
+  "crates/filenym-core",
+  "crates/filenym-ports",
+  "crates/filenym-app",
+  "crates/filenym-infra",
+  "src-tauri",
+]
+resolver = "2"
