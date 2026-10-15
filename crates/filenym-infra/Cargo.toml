@@ -7,3 +7,6 @@ edition = "2021"
 filenym-core = { path = "../filenym-core" }
 filenym-ports = { path = "../filenym-ports" }
 rusqlite = { version = "=0.40.2", default-features = false, features = ["bundled"] }
+
+[dev-dependencies]
+filenym-app = { path = "../filenym-app" }

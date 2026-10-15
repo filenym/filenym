@@ -794,6 +794,7 @@ dependencies = [
 name = "filenym-infra"
 version = "0.1.0"
 dependencies = [
+ "filenym-app",
  "filenym-core",
  "filenym-ports",
  "rusqlite",
