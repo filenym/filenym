@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-select-existing-file"
+description = "Enables the select_existing_file command without any pre-configured scope."
+commands.allow = ["select_existing_file"]
+
+[[permission]]
+identifier = "deny-select-existing-file"
+description = "Denies the select_existing_file command without any pre-configured scope."
+commands.deny = ["select_existing_file"]

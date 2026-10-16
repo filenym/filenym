@@ -10,3 +10,6 @@ rusqlite = { version = "=0.40.2", default-features = false, features = ["bundled
 
 [dev-dependencies]
 filenym-app = { path = "../filenym-app" }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "=0.61.2", features = ["Win32_Storage_FileSystem", "Win32_Foundation", "Win32_System_WindowsProgramming"] }
