@@ -3,5 +3,17 @@
   "identifier": "default",
   "description": "Main FileNym window",
   "windows": ["main"],
-  "permissions": ["core:default"]
+  "permissions": [
+    "core:default",
+    "allow-version",
+    "allow-registry-status",
+    "allow-reopen-registry",
+    "allow-get-canonical-file",
+    "allow-list-registered-files",
+    "allow-add-alias",
+    "allow-rename-alias",
+    "allow-delete-alias",
+    "allow-select-existing-file",
+    "allow-register-selected-file"
+  ]
 }

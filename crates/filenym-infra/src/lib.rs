@@ -3,6 +3,7 @@
 //! SQLite stores registry metadata behind the persistence contract. Filesystem
 //! identity adapters and desktop composition remain deferred.
 
+pub mod registration;
 mod sqlite;
 pub use sqlite::SqliteRepository;
 

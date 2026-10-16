@@ -1,0 +1,30 @@
+{
+  "id": "fixture",
+  "revision": "9223372036854775807",
+  "filename": {
+    "encoding": "windowsUtf16",
+    "units": [65, 55296],
+    "display": "A\\u{D800}",
+    "escaped": true
+  },
+  "savedPath": {
+    "encoding": "windowsUtf16",
+    "units": [67, 58, 92, 65, 55296],
+    "display": "C:\\A\\u{D800}",
+    "escaped": true
+  },
+  "sizeBytes": "18446744073709551615",
+  "modifiedAt": null,
+  "registeredAt": { "seconds": "-1", "nanoseconds": 999999900 },
+  "lastObservedAt": { "seconds": "0", "nanoseconds": 0 },
+  "status": { "kind": "possibleReplacement" },
+  "aliases": [
+    {
+      "id": "alias",
+      "canonicalFileId": "fixture",
+      "name": "Report.PDF",
+      "createdAt": { "seconds": "0", "nanoseconds": 0 },
+      "updatedAt": { "seconds": "0", "nanoseconds": 100 }
+    }
+  ]
+}

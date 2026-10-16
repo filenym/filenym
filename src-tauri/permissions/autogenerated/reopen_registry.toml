@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-reopen-registry"
+description = "Enables the reopen_registry command without any pre-configured scope."
+commands.allow = ["reopen_registry"]
+
+[[permission]]
+identifier = "deny-reopen-registry"
+description = "Denies the reopen_registry command without any pre-configured scope."
+commands.deny = ["reopen_registry"]

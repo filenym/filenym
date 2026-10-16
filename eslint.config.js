@@ -5,11 +5,11 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist/**", "src-tauri/gen/**", "target/**"] },
+  { ignores: ["dist/**", "src-tauri/gen/**", "target/**", "temp/**"] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    files: ["*.cjs"],
+    files: ["*.cjs", "tests/desktop/*.mjs"],
     languageOptions: { globals: globals.node },
   },
   {

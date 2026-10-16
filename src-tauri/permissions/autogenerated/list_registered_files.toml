@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-list-registered-files"
+description = "Enables the list_registered_files command without any pre-configured scope."
+commands.allow = ["list_registered_files"]
+
+[[permission]]
+identifier = "deny-list-registered-files"
+description = "Denies the list_registered_files command without any pre-configured scope."
+commands.deny = ["list_registered_files"]
